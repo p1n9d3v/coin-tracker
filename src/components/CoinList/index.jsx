@@ -8,9 +8,9 @@ function CoinList() {
 
     const { data } = useSuspenseQuery({
         queryKey: ['coins'],
-        fetchFn: fetchCoins,
+        queryFn: fetchCoins,
     });
-    console.log(data);
+
     return (
         <ul className={styles.CoinList}>
             {/* {coins.map((coin, index) => ( */}
