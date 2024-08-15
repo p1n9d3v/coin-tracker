@@ -1,97 +1,131 @@
+@import 'reset-css';
+@import './reset.module.css';
+
 :root {
-  /* Gray */
-  --colors-coolGray-50: #f9fafb;
-  --colors-coolGray-100: #f3f4f6;
-  --colors-coolGray-200: #e5e7eb;
-  --colors-coolGray-300: #d1d5db;
-  --colors-coolGray-400: #9ca3af;
-  --colors-coolGray-500: #6b7280;
-  --colors-coolGray-600: #4b5563;
-  --colors-coolGray-700: #374151;
-  --colors-coolGray-800: #1f2937;
-  --colors-coolGray-900: #111827;
+    --colors-white: #ffffff;
+    --colors-black: #000000;
 
-  /* Red */
-  --colors-red-50: #fdf2f2;
-  --colors-red-100: #fde8e8;
-  --colors-red-200: #fbd5d5;
-  --colors-red-300: #f8b4b4;
-  --colors-red-400: #f98080;
-  --colors-red-500: #f05252;
-  --colors-red-600: #e02424;
-  --colors-red-700: #c81e1e;
-  --colors-red-800: #9b1c1c;
-  --colors-red-900: #771d1d;
+    /* Gray */
+    --colors-coolGray-50: #f9fafb;
+    --colors-coolGray-100: #f3f4f6;
+    --colors-coolGray-200: #e5e7eb;
+    --colors-coolGray-300: #d1d5db;
+    --colors-coolGray-400: #9ca3af;
+    --colors-coolGray-500: #6b7280;
+    --colors-coolGray-600: #4b5563;
+    --colors-coolGray-700: #374151;
+    --colors-coolGray-800: #1f2937;
+    --colors-coolGray-900: #111827;
 
-  /* Yellow */
-  --colors-amber-50: #fdfdea;
-  --colors-amber-100: #fdf6b2;
-  --colors-amber-200: #fce96a;
-  --colors-amber-300: #faca15;
-  --colors-amber-400: #e3a008;
-  --colors-amber-500: #c27803;
-  --colors-amber-600: #9f580a;
-  --colors-amber-700: #8e4b10;
-  --colors-amber-800: #723b13;
-  --colors-amber-900: #633112;
+    /* Red */
+    --colors-red-50: #fdf2f2;
+    --colors-red-100: #fde8e8;
+    --colors-red-200: #fbd5d5;
+    --colors-red-300: #f8b4b4;
+    --colors-red-400: #f98080;
+    --colors-red-500: #f05252;
+    --colors-red-600: #e02424;
+    --colors-red-700: #c81e1e;
+    --colors-red-800: #9b1c1c;
+    --colors-red-900: #771d1d;
 
-  /* Green */
-  --colors-emerald-50: #f3faf7;
-  --colors-emerald-100: #def7ec;
-  --colors-emerald-200: #bcf0da;
-  --colors-emerald-300: #84e1bc;
-  --colors-emerald-400: #31c48d;
-  --colors-emerald-500: #0e9f6e;
-  --colors-emerald-600: #057a55;
-  --colors-emerald-700: #046c4e;
-  --colors-emerald-800: #03543f;
-  --colors-emerald-900: #014737;
+    /* Yellow */
+    --colors-amber-50: #fdfdea;
+    --colors-amber-100: #fdf6b2;
+    --colors-amber-200: #fce96a;
+    --colors-amber-300: #faca15;
+    --colors-amber-400: #e3a008;
+    --colors-amber-500: #c27803;
+    --colors-amber-600: #9f580a;
+    --colors-amber-700: #8e4b10;
+    --colors-amber-800: #723b13;
+    --colors-amber-900: #633112;
 
-  /* Blue */
-  --colors-blue-50: #ebf5ff;
-  --colors-blue-100: #e1effe;
-  --colors-blue-200: #c3ddfd;
-  --colors-blue-300: #a4cafe;
-  --colors-blue-400: #76a9fa;
-  --colors-blue-500: #3f83f8;
-  --colors-blue-600: #1c64f2;
-  --colors-blue-700: #1a56db;
-  --colors-blue-800: #1e429f;
-  --colors-blue-900: #233876;
+    /* Green */
+    --colors-emerald-50: #f3faf7;
+    --colors-emerald-100: #def7ec;
+    --colors-emerald-200: #bcf0da;
+    --colors-emerald-300: #84e1bc;
+    --colors-emerald-400: #31c48d;
+    --colors-emerald-500: #0e9f6e;
+    --colors-emerald-600: #057a55;
+    --colors-emerald-700: #046c4e;
+    --colors-emerald-800: #03543f;
+    --colors-emerald-900: #014737;
 
-  /* Indigo */
-  --colors-indigo-50: #f0f5ff;
-  --colors-indigo-100: #e5edff;
-  --colors-indigo-200: #cddbfe;
-  --colors-indigo-300: #b4c6fc;
-  --colors-indigo-400: #8da2fb;
-  --colors-indigo-500: #6875f5;
-  --colors-indigo-600: #5850ec;
-  --colors-indigo-700: #5145cd;
-  --colors-indigo-800: #42389d;
-  --colors-indigo-900: #362f78;
+    /* Blue */
+    --colors-blue-50: #ebf5ff;
+    --colors-blue-100: #e1effe;
+    --colors-blue-200: #c3ddfd;
+    --colors-blue-300: #a4cafe;
+    --colors-blue-400: #76a9fa;
+    --colors-blue-500: #3f83f8;
+    --colors-blue-600: #1c64f2;
+    --colors-blue-700: #1a56db;
+    --colors-blue-800: #1e429f;
+    --colors-blue-900: #233876;
 
-  /* Purple */
-  --colors-violet-50: #f6f5ff;
-  --colors-violet-100: #edebfe;
-  --colors-violet-200: #dcd7fe;
-  --colors-violet-300: #cabffd;
-  --colors-violet-400: #ac94fa;
-  --colors-violet-500: #9061f9;
-  --colors-violet-600: #7e3af2;
-  --colors-violet-700: #6c2bd9;
-  --colors-violet-800: #5521b5;
-  --colors-violet-900: #4a1d96;
+    /* Indigo */
+    --colors-indigo-50: #f0f5ff;
+    --colors-indigo-100: #e5edff;
+    --colors-indigo-200: #cddbfe;
+    --colors-indigo-300: #b4c6fc;
+    --colors-indigo-400: #8da2fb;
+    --colors-indigo-500: #6875f5;
+    --colors-indigo-600: #5850ec;
+    --colors-indigo-700: #5145cd;
+    --colors-indigo-800: #42389d;
+    --colors-indigo-900: #362f78;
 
-  /* Pink */
-  --colors-pink-50: #fdf2f8;
-  --colors-pink-100: #fce8f3;
-  --colors-pink-200: #fad1e8;
-  --colors-pink-300: #f8b4d9;
-  --colors-pink-400: #f17eb8;
-  --colors-pink-500: #e74694;
-  --colors-pink-600: #d61f69;
-  --colors-pink-700: #bf125d;
-  --colors-pink-800: #99154b;
-  --colors-pink-900: #751a3d;
+    /* Purple */
+    --colors-violet-50: #f6f5ff;
+    --colors-violet-100: #edebfe;
+    --colors-violet-200: #dcd7fe;
+    --colors-violet-300: #cabffd;
+    --colors-violet-400: #ac94fa;
+    --colors-violet-500: #9061f9;
+    --colors-violet-600: #7e3af2;
+    --colors-violet-700: #6c2bd9;
+    --colors-violet-800: #5521b5;
+    --colors-violet-900: #4a1d96;
+
+    /* Pink */
+    --colors-pink-50: #fdf2f8;
+    --colors-pink-100: #fce8f3;
+    --colors-pink-200: #fad1e8;
+    --colors-pink-300: #f8b4d9;
+    --colors-pink-400: #f17eb8;
+    --colors-pink-500: #e74694;
+    --colors-pink-600: #d61f69;
+    --colors-pink-700: #bf125d;
+    --colors-pink-800: #99154b;
+    --colors-pink-900: #751a3d;
+
+    /* Fonts */
+    --text-xs: 1.2rem;
+    --text-sm: 1.4rem;
+    --text-base: 1.6rem;
+    --text-lg: 1.8rem;
+    --text-xl: 2rem;
+}
+
+* {
+    color: var(--colors-white);
+}
+
+html {
+    height: 100%;
+    background-color: var(--colors-coolGray-800);
+    font-size: 62.5%;
+}
+
+body {
+    height: 100%;
+}
+
+#root {
+    background-color: green;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 128rem;
 }
