@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './styles/global.module.css';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import ErrorBoundary from '@/routes/ErrorBoundary';
+import CoinDetail from '@/routes/CoinDetail';
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
             {
                 index: true,
                 element: <Coins />,
+            },
+            {
+                path: ':coinId',
+                element: <CoinDetail />,
             },
         ],
     },
