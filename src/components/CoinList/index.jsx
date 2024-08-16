@@ -4,18 +4,18 @@ import Coin from '@/components/ui/Coin';
 
 function CoinList() {
     const fetchCoins = async () =>
-        fetch('/coinss.json').then((res) => res.json());
+        fetch('/coins.json').then((res) => res.json());
 
-    const { data } = useSuspenseQuery({
+    const { data: coins } = useSuspenseQuery({
         queryKey: ['coins'],
         queryFn: fetchCoins,
     });
 
     return (
         <ul className={styles.CoinList}>
-            {/* {coins.map((coin, index) => ( */}
-            {/*     <Coin coin={coin} key={index} /> */}
-            {/* ))} */}
+            {coins.map((coin, index) => (
+                <Coin coin={coin} key={index} />
+            ))}
         </ul>
     );
 }
