@@ -5,7 +5,7 @@ import styles from './index.module.css';
 function Coin({ coin }) {
     return (
         <li className={styles.Coin}>
-            <Link href='#'>
+            <Link to={`./${coin.symbol}`} state={{ ...coin }}>
                 <img
                     className={styles.Coin__iconImg}
                     src={`https://cryptoicon-api.pages.dev/api/icon/${coin.symbol.toLowerCase()}`}
