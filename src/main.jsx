@@ -1,12 +1,13 @@
 import Root from '@/components/layouts/Root';
-import Coins from '@/routes/Coins';
+import CoinDetailPage from '@/routes/CoinDetailPage';
+import CoinsPage from '@/routes/CoinsPage';
+import ErrorBoundary from '@/routes/ErrorBoundary';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './styles/global.module.css';
-import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
-import ErrorBoundary from '@/routes/ErrorBoundary';
-import CoinDetail from '@/routes/CoinDetail';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 const router = createBrowserRouter([
     {
@@ -16,11 +17,11 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Coins />,
+                element: <CoinsPage />,
             },
             {
                 path: ':coinId',
-                element: <CoinDetail />,
+                element: <CoinDetailPage />,
             },
         ],
     },

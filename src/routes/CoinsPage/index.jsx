@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 import styles from './index.module.css';
 import Loading from '@/components/ui/Loading';
 
-function Coins() {
+function CoinsPage() {
     return (
         <div className={styles.Coins}>
             <Suspense fallback={<Loading />}>
@@ -13,4 +13,4 @@ function Coins() {
     );
 }
 
-export default Coins;
+export default CoinsPage;

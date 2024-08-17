@@ -1,5 +1,5 @@
-import { useLocation } from 'react-router-dom';
 import styles from './index.module.css';
+import { useLocation } from 'react-router-dom';
 import { useSuspenseQuery } from '@tanstack/react-query';
 
 function CoinDetail() {
@@ -13,12 +13,15 @@ function CoinDetail() {
         queryFn: fetchCoinInfo,
     });
 
-    console.log(coinInfo);
     return (
-        <div className={styles.CoinDetail}>
+        <div>
             <div className={styles.CoinDetail__title}>
-                <img src={coinInfo?.logo} alt={`${state.name} logo`} />
-                <h1>{state.name}</h1>
+                <img
+                    className={styles.CoinDetail__logoImg}
+                    src={coinInfo?.logo}
+                    alt={`${state.name} logo`}
+                />
+                <h1 className={styles.CoinDetail__name}>{state.name}</h1>
             </div>
             <p className={styles.CoinDetail__desc}>{coinInfo?.description}</p>
         </div>
