@@ -1,8 +1,8 @@
 import CoinDetail from '@/components/CoinDetail';
-import styles from './index.module.css';
-import { Suspense } from 'react';
 import CoinDetailSkeleton from '@/components/CoinDetail/skeleton';
+import { Suspense } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
+import styles from './index.module.css';
 
 function CoinDetailPage() {
     const { state } = useLocation();
