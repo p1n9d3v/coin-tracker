@@ -20,4 +20,13 @@
     font-size: var(--text-lg);
     color: var(--colors-coolGray-400);
     text-align: center;
+    white-space: pre-wrap;
+}
+
+.CoinDetail__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 2rem 0;
 }
