@@ -5,16 +5,15 @@ import { useLocation } from 'react-router-dom';
 function CoinPrice() {
     const { state } = useLocation();
 
-    const fetchCoinInfo = async () =>
+    const fetchCoinMarket = async () =>
         fetch(`https://api.coinpaprika.com/v1/${state.id}/markets`).then(
             (res) => res.json()
         );
     const { data: coinMarket } = useSuspenseQuery({
         queryKey: ['coinInfo', state.id],
-        queryFn: fetchCoinInfo,
+        queryFn: fetchCoinMarket,
     });
 
-    console.log('coinmarket', coinMarket);
     return (
         <div className={styles.CoinPrice}>
             <div className={styles.CoinPrice__box}>
