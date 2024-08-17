@@ -16,7 +16,7 @@ function Coin({ coin }) {
                             'https://cryptologos.cc/logos/usd-coin-usdc-logo.png';
                     }}
                 />
-                {coin.name}(coin.symbol)
+                {coin.name}(${coin.symbol})
                 <FaChevronRight />
             </Link>
         </li>

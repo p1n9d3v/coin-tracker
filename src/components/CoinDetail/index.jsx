@@ -1,7 +1,7 @@
-import styles from './index.module.css';
-import { useLocation } from 'react-router-dom';
-import { useSuspenseQuery } from '@tanstack/react-query';
 import SocialButton from '@/components/ui/SocialButton';
+import { useSuspenseQuery } from '@tanstack/react-query';
+import { useLocation } from 'react-router-dom';
+import styles from './index.module.css';
 
 function CoinDetail() {
     const { state } = useLocation();

@@ -8,6 +8,7 @@ import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './styles/global.module.css';
 import 'react-loading-skeleton/dist/skeleton.css';
+import CoinPrice from '@/components/CoinPrice';
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,16 @@ const router = createBrowserRouter([
             {
                 path: ':coinId',
                 element: <CoinDetailPage />,
+                children: [
+                    {
+                        index: true,
+                        element: <CoinPrice />,
+                    },
+                    {
+                        path: 'chart',
+                        element: <div>Chart</div>,
+                    },
+                ],
             },
         ],
     },

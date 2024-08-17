@@ -1,0 +1,38 @@
+.CoinPrice {
+    display: flex;
+    gap: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 2rem 3rem;
+    border-radius: 1.2rem;
+}
+
+.CoinPrice__box {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 1.2rem;
+    border: 1px solid var(--colors-coolGray-400);
+    height: 120px;
+}
+
+.CoinPrice__title {
+    display: inline-block;
+    position: relative;
+    font-size: var(--text-xl);
+    z-index: 1;
+    left: 20px;
+    top: -18%;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background-color: #131921;
+    }
+}
+
+.CoinPrice__value {
+}
