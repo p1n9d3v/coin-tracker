@@ -9,7 +9,7 @@ import { FaMedium } from 'react-icons/fa';
 import styles from './index.module.css';
 import { Link } from 'react-router-dom';
 
-function LinkButton({ type = '', href = '' }) {
+function SocialButton({ type = '', href = '' }) {
     return (
         <div className={styles.LinkButton}>
             <Link to={href} target='_blank'>
@@ -53,4 +53,4 @@ function LinkButton({ type = '', href = '' }) {
     );
 }
 
-export default LinkButton;
+export default SocialButton;

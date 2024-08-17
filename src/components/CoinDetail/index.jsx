@@ -1,8 +1,7 @@
 import styles from './index.module.css';
 import { useLocation } from 'react-router-dom';
 import { useSuspenseQuery } from '@tanstack/react-query';
-import LinkButton from '@/components/ui/LinkButton';
-import CoinDetailSkeleton from '@/components/CoinDetail/skeleton';
+import SocialButton from '@/components/ui/SocialButton';
 
 function CoinDetail() {
     const { state } = useLocation();
@@ -29,7 +28,7 @@ function CoinDetail() {
 
             <div className={styles.CoinDetail__links}>
                 {Object.entries(coinInfo.links)?.map(([type, links]) => (
-                    <LinkButton key={type} type={type} href={links.at(0)} />
+                    <SocialButton key={type} type={type} href={links.at(0)} />
                 ))}
             </div>
         </div>
